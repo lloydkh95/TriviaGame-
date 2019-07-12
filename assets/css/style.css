@@ -1,0 +1,71 @@
+#start{
+    font-size: 1.5em;
+    font-weight: bolder;
+    word-break: break-all;
+    width: 100px;
+    height: 150px;
+    border: 2px solid lightgrey;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    left: 300px;
+    left: 300px;
+    top: 50px;
+    color: lightgrey:
+}
+#start:hover{
+    border: 3px solid lightseagreen;
+    color: lightseagreen;
+}
+#qimage{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+#qImg img{
+    width: 200px;
+    height: 200px;
+    border-top-left-radius: 5px;
+}
+#question{
+    width:500px;
+    height: 125px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+#question p{
+    margin: 0;
+    padding: 15px;
+    font-size: 1.25em;
+}
+#choices{
+    width: 480px;
+    position: absolute;
+    right: 0;
+    top: 125px;
+    padding: 10px;
+}
+.choice{
+    display: inline-block;
+}
+#timer{
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    bottom: 0px;
+    text-align: center;
+}
+#counter{
+    font-size: 3em;
+}
+#btimeGauge{
+    width: 150px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: lightgray;
+    margin-left: 25px;
+}
+
