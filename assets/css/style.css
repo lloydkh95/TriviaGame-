@@ -1,66 +1,85 @@
-html,
-body {
-  height: 100%;
-}
-
-body {
-  text-align: center;
-  background-image: url("../images/tacky.jpg");
-}
-
-#wrapper {
-  width: 960px;
-  height: 95%;
+*, *::before, *::after {
   box-sizing: border-box;
-  margin: 2.5% auto;
-  background-color: #fff17a;
+  font-family: Gotham Rounded;
 }
 
-#sub-wrapper {
-  position: relative;
-  top: 15%;
+:root {
+  --hue-neutral: 200;
+  --hue-wrong: 0;
+  --hue-correct: 145;
 }
 
-button {
-  display: block;
-  width: 50%;
-  height: 20%;
-  margin: 0 auto;
-  font-size: 42px;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
+body {
+  --hue: var(--hue-neutral);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(var(--hue), 100%);
 }
 
-img {
-  height: 200px;
+body.correct {
+  --hue: var(--hue-correct);
 }
 
-h1 {
-  padding-top: 2.5%;
-  font-family: Geo, sans-serif;
-  font-size: 6.5em;
+body.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.container {
+  width: 800px;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  --hue: var(--hue-neutral);
+  border: 1px solid hsl(var(--hue), 100%, 30%);
+  background-color: hsl(var(--hue), 100%, 50%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  outline: none;
+}
+
+.btn:hover {
+  border-color: black;
+}
+
+.btn.correct {
+  --hue: var(--hue-correct);
+  color: black;
+}
+
+.btn.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.start-btn, .next-btn {
+  font-size: 1.5rem;
   font-weight: bold;
-  color: blue;
+  padding: 10px 20px;
 }
 
-h2 {
-  margin-bottom: 25px;
-  font-size: 35px;
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h3 {
-  margin-bottom: 10px;
-  font-size: 25px;
-}
-
-#start {
-  margin-top: 10%;
-  background: pink;
-  border: 2px solid blue;
-}
-
-button:hover {
-  background: pink;
-  border: 2px solid blue;
+.hide {
+  display: none;
 }
